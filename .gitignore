@@ -1,4 +1,7 @@
 node_modules/
-build/
+build/background.js
+build/background.js.map
+build/popup.js
+build/popup.js.map
 production/
 production.zip
