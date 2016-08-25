@@ -2,6 +2,8 @@
 
 Website Usage is an extension that allows you to track the time you spend on your favorite websites. Website Usage presents a simplistic user interface that enables you to easily see the time you've spent on certain websites today, this past week, this past month, and even this past year. Add and remove any websites by name, rather than by domain, with ease.
 
+![alt text](https://github.com/jjpestacio/website-usage/blob/master/pictures/screenshots/1.png "UI")
+
 ## Usage
 
 [Checkout the extension on the chrome store, it's free!](https://chrome.google.com/webstore/detail/website-usage/ooohjhkoeekllmbjpkdpfmlkmjkbmacl)
