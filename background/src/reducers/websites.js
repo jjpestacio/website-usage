@@ -1,8 +1,19 @@
-import { ADD_ARCHIVE, ADD_TIME, ADD_WEBSITE, REMOVE_WEBSITE } from '../constants'
+import { 
+	ADD_ARCHIVE, ADD_COLORS, ADD_TIME, 
+	ADD_WEBSITE, REMOVE_WEBSITE } 
+from '../constants'
 import { getColor } from '../functions'
 
 export const websites = ( state=[], action ) => {
 	switch (action.type) {
+		case ADD_COLORS: {
+			return state.map( website => {
+				return {
+					...website,
+					color: getColor(website.url)
+				}
+			});
+		}
 
 		// Reset all timeActives
 		case ADD_ARCHIVE: {

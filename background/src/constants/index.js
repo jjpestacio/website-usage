@@ -1,4 +1,5 @@
 export const ADD_ARCHIVE = 'ADD_ARCHIVE'
+export const ADD_COLORS = 'ADD_COLORS'
 export const ADD_TIME = 'ADD_TIME'
 export const ADD_WEBSITE = 'ADD_WEBSITE'
 export const CHANGE_DATE = 'CHANGE_DATE'

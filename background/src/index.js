@@ -1,7 +1,7 @@
 import { wrapStore } from 'react-chrome-redux'
 import moment from 'moment'
 
-import { changeActive, resetDay } from './functions'
+import { addColors, changeActive, resetDay } from './functions'
 import { configureStore } from './store'
 
 let store;
@@ -45,8 +45,8 @@ const addListeners = () => {
 chrome.storage.sync.get(null, state => {
 		
 	// Get today's date
-	// const date = moment().format('MM/DD/YYYY');
-	const date = '08/10/2016';
+	const date = moment().format('MM/DD/YYYY');
+	// const date = '08/30/2016';
 
 	// Create store from sync
 	store = configureStore(state);
@@ -55,6 +55,9 @@ chrome.storage.sync.get(null, state => {
 	// Reset day if applicable
 	if (date !== store.getState().date)
 		resetDay(store, date);
+
+	// Temp because of new update to v1.3
+	store.dispatch({ type: 'ADD_COLORS' });
 
 	addListeners();
 });
