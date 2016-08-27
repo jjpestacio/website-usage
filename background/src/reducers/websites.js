@@ -1,4 +1,5 @@
 import { ADD_ARCHIVE, ADD_TIME, ADD_WEBSITE, REMOVE_WEBSITE } from '../constants'
+import { getColor } from '../functions'
 
 export const websites = ( state=[], action ) => {
 	switch (action.type) {
@@ -6,10 +7,9 @@ export const websites = ( state=[], action ) => {
 		// Reset all timeActives
 		case ADD_ARCHIVE: {
 			return state.map( website => { 
-				return { 
-					url: website.url, 
-					faviconUrl: website.faviconUrl, 
-					timeActive: 0 
+				return {
+					...website,
+					timeActive: 0
 				}
 			});
 		}
@@ -42,7 +42,8 @@ export const websites = ( state=[], action ) => {
 			const website = {
 				url: url,
 				faviconUrl: 'https://plus.google.com/_/favicon?domain=' + url + '.com',
-				timeActive: 0
+				timeActive: 0,
+				color: getColor(url) // For graphing
 			}
 
 			return [ ...state, website ];

@@ -20,6 +20,10 @@ const addListeners = () => {
 				changeActive(store, tabs[0]);
 			});
 		}
+
+		else { // page is loading so turn off timer
+			changeActive(store, { url: '' });
+		}
 	});
 
 	// Switched tabs
@@ -39,10 +43,10 @@ const addListeners = () => {
 
 // Ensure that sync happens first
 chrome.storage.sync.get(null, state => {
-	
+		
 	// Get today's date
-	const date = moment().format('MM/DD/YYYY');
-	// const date = '08/23/2016';
+	// const date = moment().format('MM/DD/YYYY');
+	const date = '08/10/2016';
 
 	// Create store from sync
 	store = configureStore(state);

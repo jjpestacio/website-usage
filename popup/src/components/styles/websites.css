@@ -1,0 +1,36 @@
+.website, .total-time {
+	opacity: 0.7;
+	transition: all 0.3s ease-out;
+}
+
+.website:hover, .total-time:hover {
+	cursor: pointer;
+	opacity: 1;
+	transition: all 0.3s ease-in;
+}
+
+.website {
+	/*border: 2px red solid;*/
+	/*color: #8c8c8c;*/
+	color: #666666;
+	margin-top: 5px;
+	overflow: auto;
+	white-space: nowrap;
+}
+
+.favicon {
+	height: 20px;
+	width: 20px;
+	margin-right: 5px;
+	vertical-align: top;
+}
+
+.time {
+	float: right;
+}
+
+.total-time {
+	color: #666666;
+	/*font-weight: bold;*/
+	margin-top: 10px;
+}
